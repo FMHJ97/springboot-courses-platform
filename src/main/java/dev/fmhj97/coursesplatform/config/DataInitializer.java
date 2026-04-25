@@ -45,7 +45,7 @@ public class DataInitializer {
     @EventListener(ApplicationReadyEvent.class)
     public void init() {
 
-        String adminEmail = "admin@coursesplatorm.com";
+        String adminEmail = "admin@coursesplatform.com";
 
         boolean adminExists = instructorRepository.existsByEmail(adminEmail) ||
                 studentRepository.existsByEmail(adminEmail) || adminRepository.existsByEmail(adminEmail);

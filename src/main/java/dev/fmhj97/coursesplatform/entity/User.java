@@ -11,7 +11,7 @@ import java.util.Collection;
 import java.util.List;
 
 @MappedSuperclass
-abstract class User implements UserDetails {
+public abstract class User implements UserDetails {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
