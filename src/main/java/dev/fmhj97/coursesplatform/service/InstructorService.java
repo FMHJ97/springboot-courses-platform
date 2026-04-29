@@ -114,13 +114,6 @@ public class InstructorService {
             instructor.setEmail(dto.getEmail());
         }
 
-        if (dto.getRole() != null) {
-            if (dto.getRole().equals(Role.ADMIN)) {
-                throw new InvalidDataException("Cannot assign ADMIN role");
-            }
-            instructor.setRole(dto.getRole());
-        }
-
         return InstructorResponseDto.from(instructorRepository.save(instructor));
     }
 }

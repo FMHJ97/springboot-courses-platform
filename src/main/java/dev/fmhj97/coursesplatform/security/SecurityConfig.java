@@ -50,7 +50,9 @@ public class SecurityConfig {
                         .requestMatchers("/auth/**").permitAll()
                         .requestMatchers("/courses/**").hasAnyRole("INSTRUCTOR", "ADMIN", "STUDENT")
                         .requestMatchers("/instructors/**").hasAnyRole("INSTRUCTOR", "ADMIN")
-                        .requestMatchers("/students/**").hasRole("ADMIN")
+                        .requestMatchers("/students/**").hasAnyRole("INSTRUCTOR", "ADMIN", "STUDENT")
+                        .requestMatchers("/lessons/**").hasAnyRole("INSTRUCTOR", "ADMIN", "STUDENT")
+                        .requestMatchers("/enrollments/**").hasAnyRole("INSTRUCTOR", "ADMIN", "STUDENT")
                         .anyRequest().authenticated()
                 )
 

@@ -2,7 +2,7 @@ package dev.fmhj97.coursesplatform.dto;
 
 import java.time.LocalDate;
 
-public class InstructorUpdateDto {
+public class StudentUpdateDto {
 
     private String name;
     private String surname;
